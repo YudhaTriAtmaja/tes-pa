@@ -1,0 +1,36 @@
+{
+    "reservasi": [
+        "pengecatan dinding",
+        "pemasangan lantai",
+        "perbaikan atap",
+        "pembangunan ruang tambahan",
+        "renovasi kamar"
+    ],
+    "harga": [
+        200000,
+        400000,
+        600000,
+        800000,
+        900000
+    ],
+    "no": [
+        1,
+        2
+    ],
+    "user": [
+        "ayud",
+        "arif"
+    ],
+    "reservasi_user": [
+        "pembangunan ruang tambahan",
+        "pengecatan dinding"
+    ],
+    "harga_reservasi": [
+        800000,
+        200000
+    ],
+    "status pembayaran": [
+        "lunas",
+        "lunas"
+    ]
+}
