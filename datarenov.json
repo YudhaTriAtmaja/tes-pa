@@ -18,15 +18,15 @@
         2
     ],
     "user": [
-        "ayud",
-        "arif"
+        "arif",
+        "ayud"
     ],
     "reservasi_user": [
-        "pembangunan ruang tambahan",
+        "pengecatan dinding",
         "pengecatan dinding"
     ],
     "harga_reservasi": [
-        800000,
+        200000,
         200000
     ],
     "status pembayaran": [
