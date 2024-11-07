@@ -516,13 +516,13 @@ def lihat_saldo(index):
 def tambah_saldo(index):
     try:
         jumlah = float(input("Masukkan jumlah saldo yang ingin ditambahkan: Rp "))
-        if 1 <= jumlah <= 6000000:
+        if 1 <= jumlah <= 10000000:
             data["Saldo"][index] += jumlah
             with open(json_pengguna, "w") as jsonpengguna:
                 json.dump(data, jsonpengguna, indent=4)
             print(f"Saldo berhasil ditambahkan: Rp {jumlah:.2f}")
         else:
-            print("Jumlah yang ditambahkan harus lebih besar dari 0 dan tidak lebih dari 6 juta.")
+            print("Jumlah yang ditambahkan harus lebih besar dari 0 dan tidak lebih dari 10 juta.")
 
     except ValueError:
         clear()
@@ -620,14 +620,14 @@ def buat_reservasi_user(index):
 
 def lihat_bukti_reservasi(index):
     with open(json_renovasi, "r") as jsonrenovasi:
-        json.dump(data_renovasi, jsonrenovasi, indent=4)
-    
-    print("==========BUKTI RESERVASI==========")
-    print("No. Reservasi:", data_renovasi["no"][index])
-    print("User:", data_renovasi["user"][index])
-    print("Reservasi:", data_renovasi["reservasi_user"][index])
-    print("Harga:", data_renovasi["harga_reservasi"][index]) 
-    print("Status Pembayaran:", data_renovasi["status pembayaran"][index])
-    print("===================================")
-    menu_user(index)
+        data_renovasi = json.load(jsonrenovasi)
+
+        print("==========BUKTI RESERVASI==========")
+        print("No. Reservasi:", data_renovasi["no"][index])
+        print("User:", data_renovasi["user"][index])
+        print("Reservasi:", data_renovasi["reservasi_user"][index])
+        print("Harga:", data_renovasi["harga_reservasi"][index]) 
+        print("Status Pembayaran:", data_renovasi["status pembayaran"][index])
+        print("===================================")
+
 menu_utama()
